@@ -331,12 +331,12 @@ export class Tree extends Component {
                 return true;
             }
         }
-    }
+	}
 
     isFilterMatched(node, {searchFields, filterText, isStrictMode}) {
         let matched = false;
         for(let field of searchFields) {
-            let fieldValue = String(ObjectUtils.resolveFieldData(node, field)).toLocaleLowerCase(this.props.filterLocale);
+            let fieldValue = String(ObjectUtils.resolveFieldData(node,field)).toLocaleLowerCase(this.props.filterLocale);
             if(fieldValue.indexOf(filterText) > -1) {
                 matched = true;
             }
